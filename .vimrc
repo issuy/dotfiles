@@ -44,6 +44,7 @@ else
   if has('persistent_undo')
     " keep an undo file (undo changes after closing)
     set undofile
+    set undodir=~/.tmp
   endif
   set backupdir=~/.tmp
 endif
