@@ -1,16 +1,16 @@
 [core]
-	editor = vim
-	autocrlf = input
-	whitespace = trailing-space,space-before-tab,indent-with-non-tab
-	pager = lv
+  editor = vim
+  autocrlf = input
+  whitespace = trailing-space,space-before-tab,indent-with-non-tab
+  pager = lv
 [color]
-	ui = true
+  ui = true
 [user]
-	name = issuy
-	email = akito.ew@gmail.com
+  name = issuy
+  email = akito.ew@gmail.com
 [diff]
-	tool = vimdiff
+  tool = vimdiff
 [difftool]
-	prompt = false
+  prompt = false
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
