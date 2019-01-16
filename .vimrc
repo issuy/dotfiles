@@ -45,6 +45,7 @@ else
     " keep an undo file (undo changes after closing)
     set undofile
   endif
+  set backupdir=~/.tmp
 endif
 
 if &t_Co > 2 || has("gui_running")
