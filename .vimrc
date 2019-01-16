@@ -34,6 +34,7 @@ catch
 endtry
 
 " ## Personal conf ##
+call mkdir($HOME . "/.vim/tmp", "p")
 
 if has("vms")
   " do not keep a backup file, use versions instead
@@ -44,10 +45,11 @@ else
   if has('persistent_undo')
     " keep an undo file (undo changes after closing)
     set undofile
-    set undodir=~/.tmp
+    set undodir=~/.vim/tmp
   endif
-  set backupdir=~/.tmp
+  set backupdir=~/.vim/tmp
 endif
+set directory=~/.vim/tmp
 
 if &t_Co > 2 || has("gui_running")
   " Switch on highlighting the last used search pattern.
