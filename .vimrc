@@ -87,3 +87,5 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
+" Sync vim and OS clipboard
+set clipboard=unnamed
