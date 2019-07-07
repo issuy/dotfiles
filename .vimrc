@@ -27,11 +27,9 @@ call plug#end()
 set helplang=ja,en
 
 " -- solarized
+syntax enable
 set background=dark
-try
-    colorscheme solarized
-catch
-endtry
+colorscheme solarized
 
 " ## Personal conf ##
 call mkdir($HOME . "/.vim/tmp", "p")
@@ -89,3 +87,7 @@ endif
 
 " Sync vim and OS clipboard
 set clipboard=unnamed
+
+" Background color
+highlight Normal ctermbg=none
+
