@@ -108,3 +108,5 @@ source /usr/local/share/zsh-history-substring-search/zsh-history-substring-searc
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
 
+source ~/.zshrc.local
+
