@@ -3,6 +3,7 @@
   autocrlf = input
   whitespace = trailing-space,space-before-tab,indent-with-non-tab
   pager = lv
+  excludesfile = ~/.gitignore_global
 [color]
   ui = true
 [user]
