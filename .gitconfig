@@ -9,9 +9,9 @@
 [user]
   name = issuy
   email = akito.ew@gmail.com
+[init]
+  defaultBranch = main
 [diff]
   tool = vimdiff
 [difftool]
   prompt = false
-[credential]
-  helper = osxkeychain
