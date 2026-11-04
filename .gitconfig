@@ -15,3 +15,8 @@
   tool = vimdiff
 [difftool]
   prompt = false
+[transfer]
+	fsckObjects = true
+# ~/.gitconfig.local: 公開しない・マシンごとの設定（コミット署名の gpg.format / user.signingkey / commit.gpgsign）
+[include]
+	path = ~/.gitconfig.local

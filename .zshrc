@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/akito.ishitani/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -42,7 +42,7 @@ ZSH_THEME="candy"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -70,6 +70,8 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=()
 
+# compinit runs inside oh-my-zsh.sh, so completions must be on fpath before it
+fpath=(/opt/homebrew/share/zsh-completions $fpath)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -97,9 +99,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias cdt='cd "$(git rev-parse --show-toplevel)"'
 
 # Activate modules installed from brew
-fpath=(/opt/homebrew/share/zsh-completions $fpath)
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(direnv hook zsh)"
@@ -112,8 +114,8 @@ source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-se
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
 
-source ~/.zshrc.local
-
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
