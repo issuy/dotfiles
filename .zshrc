@@ -114,6 +114,13 @@ source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-se
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
 
+zshaddhistory() {
+  if [[ $1 =~ '(^|[[:space:];&|])[A-Za-z_]*(TOKEN|SECRET|PASSWORD|API_KEY)=[^$[:space:]]' \
+     || $1 =~ '(ghp_|gho_|github_pat_|xox[bp]-)' ]]; then
+    return 2
+  fi
+}
+
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 autoload -U +X bashcompinit && bashcompinit
