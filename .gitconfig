@@ -16,6 +16,6 @@
   prompt = false
 [transfer]
 	fsckObjects = true
-# ~/.gitconfig.local: 公開しない・マシンごとの設定（コミット署名の gpg.format / user.signingkey / commit.gpgsign）
+# ~/.gitconfig.local: 公開しない・マシンごとの設定（コミット署名の gpg.format / user.signingkey / commit.gpgsign / gpg.ssh.allowedSignersFile）
 [include]
 	path = ~/.gitconfig.local
